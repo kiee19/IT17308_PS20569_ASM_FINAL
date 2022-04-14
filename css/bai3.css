@@ -1,0 +1,55 @@
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 500px;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+table {
+    width: 80%;
+    font-size: 20px;
+    margin: 0 auto
+}
+
+#select {
+    text-align: center;
+    background-color: #7fffd4;
+}
+
+table, td, th {
+    border-collapse: collapse;
+    border: 4px double #dac9b2;
+    background-color: #98f7f7;  
+    padding: 5px; 
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: #98f7f7;
+    text-align: center;
+}
+
+.first-title {
+    width: 40%;
+}
+
+.another-title {
+    width: calc(60%/3);
+}
+
+.first-title,
+.another-title,
+table {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 30px;
+}

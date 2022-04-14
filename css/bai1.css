@@ -1,0 +1,85 @@
+.wrapper {
+    width: 400px;
+    margin: 0 auto;
+    background-color: firebrick;
+    border: .1px solid white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.heading {
+    color: white;
+    font-size: 20px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#kq {
+    border: 1px solid white;
+    color: white;
+    padding-top: 10px;
+    margin-top: 20px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px white;
+    margin-top: 20px;
+    display: none;
+}
+
+
+#a,
+#b,
+#c {
+    display: inline-block;
+    margin: 10px 0;
+    margin-left: 15px;
+    background-color: #ffebcd;
+    height: 20px;
+    text-align: center;
+}
+
+.information span {
+    color: white;
+}
+
+.sub-heading {
+    color: white;
+    opacity: 0.8;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.sub-heading #solangiai {
+    color: yellowgreen;
+    opacity: 1;
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#a:focus,
+#b:focus,
+#c:focus {
+    background-color: white;
+
+}
+
+#dongho {
+    color: yellowgreen;
+    font-weight: 600;
+    margin-top: 16px
+}
+
+p {
+    margin-top: 0px;
+}
+
+.no-margin {
+    margin: 0;
+}

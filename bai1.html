@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS20569_ASM_Bai1</title>
+    <link rel="stylesheet" href="css/bai1.css">
+</head>
+
+<body>
+
+    <script>
+        var dh = null;
+        var solangiai = null;
+
+        function choSo() {
+            var a = Math.round(Math.random() * 10);
+            var b = Math.round(Math.random() * 10);
+            var c = Math.round(Math.random() * 10);
+
+            document.getElementById("a").value = a;
+            document.getElementById("b").value = b;
+            document.getElementById("c").value = c;
+
+            var btn = document.getElementById("btngiai");
+            btn.disabled = false;
+            btn.style.backgroundColor = "lightseagreen";
+        }
+
+        function giaiPT() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            document.getElementById("kq").style.display = 'block';
+
+
+            if (a == 0) {
+                if (b == 0) {
+                    if (c == 0) {
+                        document.getElementById("kq").innerHTML = "<p>Phương trình vô số nghiệm</p>"
+                    } else {
+                        document.getElementById("kq").innerHTML = "<p>Phương trình vô nghiệm</p>"
+                    }
+                } else {
+                    var x = -c / b;
+                    kq = `<p>Phương trình có nghiệm: ${x.toFixed(2)}</p>`;
+                    document.getElementById("kq").innerHTML = kq;
+                }
+            } else {
+                var delta = b * b - 4 * a * c;
+                if (delta < 0) {
+                    document.getElementById("kq").innerHTML = ("<p>Phương trình vô nghiệm</p>")
+                } else if (delta == 0) {
+                    var x0 = -b / (2 * a);
+                    document.getElementById("kq").innerHTML = "<p>Phương trình có nghiệm kép x<sub>0</sub> = " + x0.toFixed(2) + "</p>";
+                } else {
+                    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    var str1 = "Phương trình có 2 nghiệm phân biệt";
+                    var str2 = "X<sub>1</sub> = " + x1.toFixed(2);
+                    var str3 = "X<sub>2</sub> = " + x2.toFixed(2);
+                    document.getElementById("kq").innerHTML = str1 + "<p></p>" + str2 + "<p></p>" + str3;
+
+                }
+                var btn = document.getElementById("btngiai");
+                btn.disabled = true;
+                btn.style.backgroundColor = "gray";
+            }
+        }
+
+        function tg() {
+            var now = new Date();
+            var ngay = now.getDate();
+            var thang = now.getMonth();
+            var nam = now.getFullYear();
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+            var hientai = ngay + "/" + thang + "/" + nam + "/" + h + ":" + m + ":" + s;
+            var str = "Bây giờ là " + hientai;
+            document.getElementById("dongho").innerHTML = str;
+        }
+
+        function dem() {
+            solangiai++;
+            document.getElementById("solangiai").innerHTML = solangiai;
+        }
+    </script>
+
+    <script>
+        dh = setInterval("tg()", 1000); 
+    </script>
+    <div class="wrapper">
+        <form>
+            <div class="heading">
+                GIẢI PHƯƠNG TRÌNH 
+                ax<sup>2</sup> 
+                &nbsp+ bx + c = 0
+            </div>
+
+            <div class="sub-heading">
+                Số lần giải: <b id="solangiai">0</b>
+            </div>
+
+            <hr class="line">
+
+            <div class="information">
+                <span>Nhập số a:</span>
+                <input type="text" id="a"> <br>
+                <span>Nhập số b:</span>
+                <input type="text" id="b"> <br>
+                <span>Nhập số c:</span>
+                <input type="text" id="c"> <br>
+
+                <input class="btn" type="button" disabled id="btngiai" value="Giải PT" onclick="giaiPT(); dem();">
+                <input type="button" class="btn" value="Cho số" onclick="choSo();">
+
+
+            </div>
+
+            <div id="kq"></div>
+            <p id="dongho"></p>
+        </form>
+    </div>
+</body>
+
+</html>

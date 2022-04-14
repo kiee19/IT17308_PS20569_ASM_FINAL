@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS20569_ASM_Bai2</title>
+    <link rel="stylesheet" href="css/bai2.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+<body onload="loadAnh();">
+    <div class="slider">
+        <h2>Album Động vật</h2>
+        <div class="slider-main">
+            <div class="slider-item">
+                <img src="images/0.jpg" id="anh">
+            </div>
+        </div>
+        <ion-icon class="left-angle" name="chevron-back-circle" onclick="previous();"></ion-icon>
+        <ion-icon class="right-angle" name="chevron-forward-circle" onclick="next();"></ion-icon>
+        <div class="slider-pages">
+            <span  id="count">1</span>/6
+        </div>
+    </div>
+    <p class="ten">PS20569 <br> Gịp Xương Gia Kiệt</p>
+
+    <script>
+        var arrAnh = [];
+        var n = 6;
+        var index = 0;
+        function loadAnh() {
+            for (var i = 0; i < n; i++) {
+                arrAnh[i] = new Image();
+                arrAnh[i].src = "images/" + i + ".jpg";
+            }
+        }
+
+        function next() {
+            index++;
+            if (index >= arrAnh.length) index = 0;
+            var anh = document.getElementById('anh');
+            anh.src = arrAnh[index].src;
+            document.getElementById('count').innerHTML = index + 1;
+        }
+
+        function previous() {
+            index--;
+            if (index < 0) index = arrAnh.length - 1;
+            var anh = document.getElementById('anh');
+            anh.src = arrAnh[index].src;
+            document.getElementById('count').innerHTML = index + 1;
+        }
+    </script>
+</body>
+
+</html>

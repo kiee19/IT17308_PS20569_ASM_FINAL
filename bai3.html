@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PS20569_ASM_Bai3</title>
+    <link rel="stylesheet" href="css/bai3.css" />
+    <script src="js/bai3.js"></script>
+</head>
+
+<body onload="tinhTong();">
+    <div class="wrapper">
+        <h2 class="title">BÁN HÀNG</h2>
+        <select id="mucgia" onchange="thaydoimucgia();">
+            <option value="Mức giá">Mức giá</option>
+            <option value="0">0</option>
+            <option value="200">200</option>
+            <option value="400">400</option>
+            <option value="600">600</option>
+            <option value="800">800</option>
+        </select>
+        <hr class="line" />
+
+        <form>
+            <table id="gh">
+                <tr>
+                    <td class="first-title bold" colspan="2">Hàng hóa</td>
+                    <td class="another-title bold"><label>đ</label>đơn giá</td>
+                    <td class="another-title bold">Số lượng</td>
+                    <td class="another-title bold">Thành tiền</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" class="chk" checked onchange="thayDoiTT(this);">
+                    </td>
+                    <td>Iphone 9</td>
+                    <td name="price">700</td>
+                    <td>
+                        <input type="number" class="sl" value="1" min="1" max="10" onchange="tinhTT(this); tinhTong();" />
+                    </td>
+                    <td><span name="thanhtien">700</span> đ</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" class="chk" checked onchange="thayDoiTT(this);">
+                    </td>
+                    <td>SamSung</td>
+                    <td name="price">400</td>
+                    <td>
+                        <input type="number" class="sl" value="1" min="1" max="10" onchange="tinhTT(this); tinhTong();" />
+                    </td>
+                    <td><span name="thanhtien">400</span> đ</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" class="chk" checked onchange="thayDoiTT(this);">
+                    </td>
+                    <td>Nokia</td>
+                    <td name="price">100</td>
+                    <td>
+                        <input type="number" class="sl" value="1" min="1" max="10" onchange="tinhTT(this); tinhTong();" />
+                    </td>
+                    <td><span name="thanhtien">100</span> đ</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" class="chk" checked onchange="thayDoiTT(this);">
+                    </td>
+                    <td>Sony Xperia</td>
+                    <td name="price">450</td>
+                    <td>
+                        <input type="number" class="sl" value="1" min="1" max="10" onchange="tinhTT(this); tinhTong();" />
+                    </td>
+                    <td><span name="thanhtien">450</span> đ</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" class="chk" checked onchange="thayDoiTT(this);">
+                    </td>
+                    <td>Motorola</td>
+                    <td name="price">180</td>
+                    <td>
+                        <input type="number" class="sl" value="1" min="1" max="10" onchange="tinhTT(this); tinhTong();" />
+                    </td>
+                    <td><span name="thanhtien">180</span> đ</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" class="chk" checked onchange="thayDoiTT(this);">
+                    </td>
+                    <td>Oppo</td>
+                    <td name="price">600</td>
+                    <td>
+                        <input type="number" class="sl" value="1" min="1" max="10" onchange="tinhTT(this); tinhTong();" />
+                    </td>
+                    <td><span name="thanhtien">600</span> đ</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" class="chk" checked onchange="thayDoiTT(this);">
+                    </td>
+                    <td>Bphone</td>
+                    <td name="price">90</td>
+                    <td>
+                        <input type="number" class="sl" value="1" min="1" max="10" onchange="tinhTT(this); tinhTong();" />
+                    </td>
+                    <td><span name="thanhtien">90</span> đ</td>
+                </tr>
+                
+                <tr>
+                    <td class="bold" colspan="4">Tổng</td>
+                    <td><span class="bold" id="tong">0</span></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

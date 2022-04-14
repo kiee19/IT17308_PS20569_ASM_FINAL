@@ -1,0 +1,91 @@
+.slider {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+.slider-main {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    
+}
+
+.slider-item {
+    height: 100%;
+    width: 100%;
+    flex: 1 0 100%;
+
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+ion-icon {
+    font-size: 50px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.left-angle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    left: -25px;
+}
+
+.right-angle {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: all linear 0.3s;
+}
+
+.left-angle:hover,
+.right-angle:hover {
+    color: white;
+    background-color: red;
+    transition: all linear 0.3s;    
+}
+
+.slider-pages {
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.ten {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    text-align: center;
+}
